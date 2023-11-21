@@ -6,7 +6,11 @@ export default {
   ],
   darkMode : "class",
   theme: {
-    extend: {},
+    extend: {
+      background: {
+        "bleu" : "#3b4bff",
+      },
+    },
   },
   plugins: [],
 }
