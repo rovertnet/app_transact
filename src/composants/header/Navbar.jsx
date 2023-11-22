@@ -1,15 +1,21 @@
+import { useState } from "react";
 import {Link} from "react-scroll";
+import { BiMenuAltRight } from "react-icons/bi";
+import { HiOutlineXMark } from "react-icons/hi2";
 
 function Navbar() {
+  const [showMenu, setShowMenu] = useState(false);
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
   const navItems = [
     { link: "Accueil", path: "accueil" },
-    { link: "Tarif", path: "tarif" },
-    { link: "Nous", path: "about" },
+    { link: "A propos", path: "about" },
     { link: "Contact", path: "contact" },
   ];
   return (
     <>
-      <div className="bg-[#3b4bff] md:px-14 p-4 max-w-screen-2xl mx-auto text-purple-500 fixed top-0 right-0 left-0 shadow-md">
+      <div className="bg-[#096cff] md:px-14 p-4 max-w-screen-2xl mx-auto text-[#feff5b] fixed top-0 right-0 left-0 shadow-md">
         <div className="text-lg container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-10">
             <a href="#">
@@ -19,7 +25,7 @@ function Navbar() {
             <ul className=" md:flex space-x-10 hidden">
               {navItems.map(({ link, path }) => (
                 <Link
-                  className=" block hover:text-[#c654c6] cursor-pointer"
+                  className=" block hover:text-white cursor-pointer"
                   onactiveclass="active"
                   spy={true}
                   smooth={true}
@@ -31,13 +37,50 @@ function Navbar() {
                 </Link>
               ))}
             </ul>
-            <div className=" space-x-12 hidden md:flex items-center">
-              <button className=" bg-purple-500 py-2 px-4 translate-all duration-300 rounded-3xl text-white hover:border-2 hover:border-purple-500 hover:text-purple-500 hover:bg-white">
-                connexion
-              </button>
-              {/* modal */}
-            </div>
           </div>
+          <div className=" space-x-12 hidden md:flex items-center">
+            <button className=" bg-[#feff5b] py-2 px-4 text-base translate-all duration-300 rounded-3xl text-[#096cff] hover:border-2 hover:border-purple-500 hover:text-purple-500 hover:bg-white">
+              connexion
+            </button>
+            {/* modal */}
+          </div>
+          <div className=" md:hidden">
+            <button
+              onClick={toggleMenu}
+              className=" text-white focus:outline-none focus:text-[#feff5b]"
+            >
+              {showMenu ? (
+                <HiOutlineXMark className=" h-8 w-8 text-[#feff5b] transition-all duration-700" />
+              ) : (
+                <BiMenuAltRight className=" h-10 w-10 text-[#feff5b] transition-all duration-700" />
+              )}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={` space-y-4 px-6 pt-24 pb-5 w-[150px] h-full bg-white ${
+          showMenu ? "block fixed top-0 right-0 left-0" : "hidden "
+        }`}
+      >
+        {navItems.map(({ link, path }) => (
+          <Link
+            spy={true}
+            smooth={true}
+            offset={-80}
+            key={link}
+            to={path}
+            className=" block text-blue-600 hover:text-yellow-500 cursor-pointer"
+            onClick={toggleMenu}
+          >
+            {link}
+          </Link>
+        ))}
+        <div className=" space-x-12 md:flex items-center">
+          <button className=" bg-[#feff5b] py-2 px-4 translate-all duration-300 rounded-3xl text-blue-600 hover:text-blue-600 hover:bg-white">
+            connexion
+          </button>
         </div>
       </div>
     </>
