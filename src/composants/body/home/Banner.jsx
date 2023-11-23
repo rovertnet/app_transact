@@ -8,8 +8,8 @@ function Banner() {
             {/* image */}
             <div>
               <img
-                className=" lg:h-full w-full"
-                src="../../../../public/img_banner.png"
+                className=" lg:h-full md:h-full w-full"
+                src="../../../../public/P1.png"
                 alt="a propos"
               />
             </div>
@@ -24,7 +24,7 @@ function Banner() {
               </p>
               <div className=" space-x-5 space-y-4 ">
                 <button className=" py-3 px-6 text-base rounded-3xl bg-pink-500 text-white hover:bg-purple-500 transition-all duration-300">
-                  Payer
+                  Payer votre facture
                 </button>
               </div>
             </div>
