@@ -2,7 +2,7 @@
 function Banner() {
   return (
     <>
-      <div className=" md:px-14 px-4 max-w-screen-2xl mx-auto my-24">
+      <div className=" md:px-14 px-4 max-w-screen-2xl mx-auto mt-16 mb-8">
         <div className=" md:p-9 px-4 py-9 bg-[#096cff] rounded-tl-[100px] rounded-br-[100px]">
           <div className=" flex flex-col md:flex-row-reverse justify-between items-center gap-10">
             {/* image */}

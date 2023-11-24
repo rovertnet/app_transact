@@ -50,9 +50,9 @@ function Navbar() {
               className=" text-white focus:outline-none focus:text-[#feff5b]"
             >
               {showMenu ? (
-                <HiOutlineXMark className=" h-8 w-8 text-[#feff5b] transition-all duration-700" />
+                <HiOutlineXMark className=" h-8 w-8 text-yellow-400 transition-all duration-300" />
               ) : (
-                <BiMenuAltRight className=" h-10 w-10 text-[#feff5b] transition-all duration-700" />
+                <BiMenuAltRight className=" h-10 w-10 text-yellow-400 transition-all duration-300" />
               )}
             </button>
           </div>
@@ -60,8 +60,10 @@ function Navbar() {
       </nav>
 
       <div
-        className={` space-y-4 mt-24 ml-24 px-6 py-3 pb-5 w-[150px] bg-white ${
-          showMenu ? "block justify-center fixed top-0 right-0 left-0" : "hidden "
+        className={` space-y-4 mt-24 ml-24 justify-center px-6 py-3 pb-5 w-[150px] bg-white ${
+          showMenu
+            ? "block justify-center fixed top-0 right-0 left-0"
+            : "hidden "
         }`}
       >
         {navItems.map(({ link, path }) => (
@@ -78,7 +80,10 @@ function Navbar() {
           </Link>
         ))}
         <div className=" space-x-12 md:flex items-center">
-          <button className=" bg-blue-600 py-2 px-4 translate-all duration-300 rounded-3xl text-white hover:text-blue-600 hover:bg-white">
+          <button
+            offset={-80}
+            className=" bg-blue-600 py-2 px-4 translate-all duration-300 rounded-3xl text-white hover:text-blue-600 hover:bg-white"
+          >
             connexion
           </button>
         </div>
