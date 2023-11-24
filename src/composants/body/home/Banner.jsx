@@ -9,7 +9,7 @@ function Banner() {
             <div>
               <img
                 className=" lg:h-full md:h-full w-full"
-                src="../../../../public/P1.png"
+                src="../../../../public/img_banner.png"
                 alt="a propos"
               />
             </div>
