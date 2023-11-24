@@ -15,7 +15,7 @@ function Navbar() {
   ];
   return (
     <>
-      <nav className="bg-[#096cff] md:px-14 p-1 max-w-screen-2xl mx-auto text-yellow-400 fixed top-0 right-0 left-0 shadow-md">
+      <nav className=" bg-blue-950 md:px-14 p-1 max-w-screen-2xl mx-auto text-yellow-400 fixed top-0 right-0 left-0 shadow-md">
         <div className="text-lg container mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-10">
             <a href="#">
@@ -25,7 +25,7 @@ function Navbar() {
             <ul className=" md:flex space-x-10 hidden">
               {navItems.map(({ link, path }) => (
                 <Link
-                  className=" block hover:text-white font-semibold cursor-pointer"
+                  className=" block hover:text-white font-semibold cursor-pointer "
                   onactiveclass="active"
                   spy={true}
                   smooth={true}
@@ -39,8 +39,8 @@ function Navbar() {
             </ul>
           </div>
           <div className=" space-x-12 hidden md:flex items-center">
-            <button className=" bg-yellow-400 py-2 px-4 text-base translate-all duration-300 rounded-3xl text-[#096cff] hover:border-2 hover:border-purple-500 hover:text-purple-500 hover:bg-white">
-              connexion
+            <button className=" bg-yellow-400 py-2 px-4 text-base font-semibold translate-all duration-300 rounded-3xl text-blue-950 hover:border-2 hover:border-purple-500 hover:text-purple-500 hover:bg-white">
+              Sign Up
             </button>
             {/* modal */}
           </div>
@@ -84,7 +84,7 @@ function Navbar() {
             offset={-80}
             className=" bg-blue-600 py-2 px-4 translate-all duration-300 rounded-3xl text-white hover:text-blue-600 hover:bg-white"
           >
-            connexion
+            Sign Up
           </button>
         </div>
       </div>

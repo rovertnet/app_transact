@@ -23,7 +23,7 @@ function Banner() {
                 Dignissimos sint facere ad, veniam earum quas quasi! 
               </p>
               <div className=" space-x-5 space-y-4 ">
-                <button className=" py-3 px-6 text-base rounded-3xl bg-pink-500 text-white hover:bg-purple-500 transition-all duration-300">
+                <button className=" py-3 px-6 text-base text-blue-950 font-semibold  rounded-3xl bg-yellow-400  hover:border-[1px] hover:text-white transition-all duration-300">
                   Payer votre facture
                 </button>
               </div>
