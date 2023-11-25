@@ -38,9 +38,7 @@ function Paie() {
               <div className="mt-2">
                 <p className="text-white text-center">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-                  quibusdam autem corporis quisquam, commodi facere odio quo
-                  quasi soluta in consectetur quis modi debitis veritatis
-                  asperiores qui culpa. Quis, libero.
+                  quibusdam autem corporis quisquam, 
                 </p>
               </div>
             </div>
