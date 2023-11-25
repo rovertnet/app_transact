@@ -5,6 +5,7 @@ import { HiOutlineXMark } from "react-icons/hi2";
 import Modal from "./modal/Modal";
 
 function Navbar() {
+  const [ showModal, setShowModal ] = useState(false)
   const [showMenu, setShowMenu] = useState(false);
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -40,7 +41,10 @@ function Navbar() {
             </ul>
           </div>
           <div className=" space-x-12 hidden md:flex items-center">
-            <button className=" bg-yellow-400 py-2 px-4 text-base font-semibold translate-all duration-300 rounded-3xl text-blue-950 hover:border-2 hover:border-purple-500 hover:text-purple-500 hover:bg-white">
+            <button
+              onClick={() => setShowModal(true)}
+              className=" bg-yellow-400 py-2 px-4 text-base font-semibold translate-all duration-300 rounded-3xl text-blue-950 hover:border-2 hover:border-purple-500 hover:text-purple-500 hover:bg-white"
+            >
               Sign Up
             </button>
             {/* modal */}
@@ -82,6 +86,7 @@ function Navbar() {
         ))}
         <div className=" space-x-12 md:flex items-center">
           <button
+            onClick={() => setShowModal(true)}
             offset={-80}
             className=" bg-blue-600 py-2 px-4 translate-all duration-300 rounded-3xl text-white hover:text-blue-600 hover:bg-white"
           >
@@ -89,7 +94,7 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <Modal />
+        { showModal && <Modal onClose={() => setShowModal(false)}/>  }
     </>
   );
 }
