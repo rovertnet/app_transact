@@ -2,6 +2,7 @@ import { useState } from "react";
 import {Link} from "react-scroll";
 import { BiMenuAltRight } from "react-icons/bi";
 import { HiOutlineXMark } from "react-icons/hi2";
+import Modal from "./modal/Modal";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -88,6 +89,7 @@ function Navbar() {
           </button>
         </div>
       </div>
+      <Modal />
     </>
   );
 }
