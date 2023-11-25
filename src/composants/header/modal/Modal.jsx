@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import { HiOutlineXMark } from "react-icons/hi2";
 
 function Modal({onClose}) {
-  const [ isLogin, setIslogin ] = useState(false)
+  const [ isLogin, setIslogin ] = useState(true)
   const modalRef = useRef();
   const closeModal = (e) => {
     if (modalRef.current === e.target) {
