@@ -3,7 +3,7 @@
 function About() {
   return (
     <>
-      <div className=" md:px-14 p-4 max-w-s mx-auto">
+      <div className=" md:px-14 p-4 max-w-s mx-auto" id="about">
         <h2 className=" md:text-4xl text-center text-3xl font-extrabold pb-3">
           A propos
         </h2>

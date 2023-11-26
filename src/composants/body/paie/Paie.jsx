@@ -25,7 +25,7 @@ function Paie() {
                   <input
                     type="text"
                     placeholder="Tapez le montant et le frais"
-                    className="md:w-[100%] w-full border-none rounded-tl-xl px-7"
+                    className="md:w-[100%] w-full border-none rounded-tl-xl px-7 focus:outline-none"
                   />
                   <button
                     type="submit"
@@ -38,7 +38,7 @@ function Paie() {
               <div className="mt-2">
                 <p className="text-white text-center">
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga
-                  quibusdam autem corporis quisquam, 
+                  quibusdam autem corporis quisquam,
                 </p>
               </div>
             </div>

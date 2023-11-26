@@ -2,7 +2,10 @@
 function Banner() {
   return (
     <>
-      <div className=" md:px-14 px-4 max-w-screen-2xl mx-auto mt-16 mb-8" id="accueil">
+      <div
+        className=" md:px-14 px-4 max-w-screen-2xl mx-auto mt-16 mb-8"
+        id="accueil"
+      >
         <div className=" md:p-9 px-4 py-9 bg-[#096cff] rounded-tl-[100px] rounded-br-[100px]">
           <div className=" flex flex-col md:flex-row-reverse justify-between items-center gap-10">
             {/* image */}
@@ -20,10 +23,10 @@ function Banner() {
               </h2>
               <p className=" text-[#f3f4f5] text-xl mb-5 md:text-justify text-justify">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos sint facere ad, veniam earum quas quasi! 
+                Dignissimos sint facere ad, veniam earum quas quasi!
               </p>
               <a className=" space-x-5 space-y-4 " href="#paie">
-                <button className=" py-3 px-6 text-base text-blue-950 font-semibold  rounded-3xl bg-yellow-400  hover:border-[1px] hover:text-white transition-all duration-300">
+                <button className=" py-3 px-6 text-xl text-white font-semibold bg-[#096cff] border-2 border-white rounded-3xl hover:bg-[#0389ff] hover:text-white hover:border-none transition-all duration-300">
                   Payer votre facture
                 </button>
               </a>

@@ -27,7 +27,7 @@ function Navbar() {
             <ul className=" md:flex space-x-10 hidden">
               {navItems.map(({ link, path }) => (
                 <Link
-                  className=" block hover:text-white font-semibold cursor-pointer "
+                  className=" block hover:border-b-4 hover:border-white hover:pb-2 hover:text-white font-semibold cursor-pointer "
                   onactiveclass="active"
                   spy={true}
                   smooth={true}
@@ -43,7 +43,7 @@ function Navbar() {
           <div className=" space-x-12 hidden md:flex items-center">
             <button
               onClick={() => setShowModal(true)}
-              className=" bg-yellow-400 py-2 px-4 text-base font-semibold translate-all duration-300 rounded-3xl text-blue-950 hover:border-2 hover:border-purple-500 hover:text-purple-500 hover:bg-white"
+              className=" bg-yellow-400 py-2 px-4 text-base font-semibold translate-all duration-300 rounded-3xl text-blue-950   hover:text-yellow-400 hover:bg-[#0c0071]"
             >
               Sign Up
             </button>
@@ -65,7 +65,7 @@ function Navbar() {
       </nav>
 
       <div
-        className={` space-y-4 mt-24 lg:ml-33 ml-32 justify-center px-6 py-3 pb-5 w-[150px] bg-white ${
+        className={` space-y-4 mt-16 w-[400] justify-center px-6 py-3 pb-5 bg-blue-950 ${
           showMenu
             ? "block justify-center fixed top-0 right-0 left-0"
             : "hidden "
@@ -78,23 +78,23 @@ function Navbar() {
             offset={-80}
             key={link}
             to={path}
-            className=" block text-blue-600 hover:text-yellow-500 cursor-pointer"
+            className=" block text-yellow-400 hover:text-white cursor-pointer font-semibold text-xl text-center"
             onClick={toggleMenu}
           >
             {link}
           </Link>
         ))}
-        <div className=" space-x-12 md:flex items-center">
+        <div className=" space-x-12 ">
           <button
             onClick={() => setShowModal(true)}
             offset={-80}
-            className=" bg-blue-600 py-2 px-4 translate-all duration-300 rounded-3xl text-white hover:text-blue-600 hover:bg-white"
+            className=" bg-yellow-400 text-xl w-full py-2 px-4 translate-all duration-300 rounded-3xl text-blue-950 font-semibold hover:text-blue-600 hover:bg-white hover:font-semibold hover:text-xl"
           >
             Sign Up
           </button>
         </div>
       </div>
-        { showModal && <Modal onClose={() => setShowModal(false)}/>  }
+      {showModal && <Modal onClose={() => setShowModal(false)} />}
     </>
   );
 }
