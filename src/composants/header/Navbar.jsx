@@ -65,7 +65,7 @@ function Navbar() {
       </nav>
 
       <div
-        className={` space-y-4 mt-24 ml-32 justify-center px-6 py-3 pb-5 w-[150px] bg-white ${
+        className={` space-y-4 mt-24 lg:ml-33 ml-32 justify-center px-6 py-3 pb-5 w-[150px] bg-white ${
           showMenu
             ? "block justify-center fixed top-0 right-0 left-0"
             : "hidden "

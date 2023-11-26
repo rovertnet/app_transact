@@ -7,7 +7,7 @@ function Paie() {
   // }
   return (
     <>
-      <div className=" md:px-14 p-4 max-w-s mx-auto">
+      <div className=" md:px-14 p-4 max-w-s mx-auto" id="paie">
         <h2 className="text-center text-3xl font-extrabold  pb-3 text-blue-600">
           Effectuez votre paiement
         </h2>
