@@ -19,7 +19,7 @@ function Footer() {
               Bienvenue sur le site de notre agence de maquillage et coiffure
               pour femmes!
             </p>
-            <div className=" py-4">
+            <div className=" py-4" id="contact">
               <input
                 type="text"
                 name="mail"

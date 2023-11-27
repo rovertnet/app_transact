@@ -64,36 +64,39 @@ function Navbar() {
         </div>
       </nav>
 
-      <div
-        className={` space-y-4 mt-16 w-[400] justify-center px-6 py-3 pb-5 bg-blue-950 ${
-          showMenu
-            ? "block justify-center fixed top-0 right-0 left-0"
-            : "hidden "
-        }`}
-      >
-        {navItems.map(({ link, path }) => (
-          <Link
-            spy={true}
-            smooth={true}
-            offset={-80}
-            key={link}
-            to={path}
-            className=" block text-yellow-400 hover:text-white cursor-pointer font-semibold text-xl text-center"
-            onClick={toggleMenu}
-          >
-            {link}
-          </Link>
-        ))}
-        <div className=" space-x-12 ">
-          <button
-            onClick={() => setShowModal(true)}
-            offset={-80}
-            className=" bg-yellow-400 text-xl w-full py-2 px-4 translate-all duration-300 rounded-3xl text-blue-950 font-semibold hover:text-blue-600 hover:bg-white hover:font-semibold hover:text-xl"
-          >
-            Sign Up
-          </button>
+      <div className="px-10">
+        <div
+          className={` space-y-4 mt-16 w-[400] justify-center px-6 py-3 pb-5 bg-blue-950 ${
+            showMenu
+              ? "block justify-center fixed top-0 right-0 left-0"
+              : "hidden "
+          }`}
+        >
+          {navItems.map(({ link, path }) => (
+            <Link
+              spy={true}
+              smooth={true}
+              offset={-80}
+              key={link}
+              to={path}
+              className=" block text-yellow-400 hover:text-white hover:bg-blue-200 hover:py-2 cursor-pointer font-semibold text-xl text-center"
+              onClick={toggleMenu}
+            >
+              {link}
+            </Link>
+          ))}
+          <div className=" space-x-12 ">
+            <button
+              onClick={() => setShowModal(true)}
+              offset={-80}
+              className=" bg-yellow-400 text-xl w-full py-2 px-4 translate-all duration-300 rounded-3xl text-blue-950 font-semibold hover:text-blue-600 hover:bg-white hover:font-semibold hover:text "
+            >
+              Sign Up
+            </button>
+          </div>
         </div>
       </div>
+
       {showModal && <Modal onClose={() => setShowModal(false)} />}
     </>
   );
