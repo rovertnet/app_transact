@@ -43,7 +43,7 @@ function Banner() {
                 variants={itemVariants}
                 className=" md:text-3xl text-2xl font-bold text-white mb-6 leading-relaxed"
               >
-                <AnimeText deley={1} />
+                <AnimeText deley={3} />
               </motion.h2>
               <motion.p
                 variants={animationVariants}

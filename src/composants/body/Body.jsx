@@ -1,4 +1,6 @@
+
 import About from "./about/About";
+import Contact from "./contact/Contacts";
 import Banner from "./home/Banner"
 import Paie from "./paie/Paie";
 
@@ -9,6 +11,7 @@ function Body() {
       <Banner />
       <About />
       <Paie />
+      <Contact />
     </div>
   );
 }
