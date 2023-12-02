@@ -1,5 +1,23 @@
+import {motion} from "framer-motion";
+import AnimeText from "./AnimeText";
+
+const itemVariants = {
+  hidden: {
+    opacity: 0,
+    y: 15,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  },
+};
 
 function Banner() {
+  
   return (
     <>
       <div
@@ -21,10 +39,14 @@ function Banner() {
               <h2 className=" md:text-3xl text-2xl font-bold text-white mb-6 leading-relaxed">
                 Je suis le premier de ce bannier, en répresentant Artha beauté.
               </h2>
-              <p className=" text-[#f3f4f5] text-xl mb-5 md:text-justify text-justify">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                Dignissimos sint facere ad, veniam earum quas quasi!
-              </p>
+              <motion.p
+                variants={itemVariants}
+                animate="visible"
+                initial="hidden"
+                className=" text-[#f3f4f5] text-xl mb-5 md:text-justify text-justify"
+              >
+                <AnimeText deley={1} />
+              </motion.p>
               <a className=" space-x-5 space-y-4 " href="#paie">
                 <button className=" py-3 px-6 text-xl text-white font-semibold border-2 border-white rounded-3xl hover:bg-[#8064f9] hover:text-white hover:border-none transition-all duration-300">
                   Payer votre facture
@@ -38,4 +60,4 @@ function Banner() {
   );
 }
 
-export default Banner
+export default Banner;

@@ -16,6 +16,7 @@ function Navbar() {
     { link: "A propos", path: "about" },
     { link: "Contact", path: "contact" },
   ];
+
   return (
     <>
       <nav className=" bg-blue-950 md:px-14 p-1 max-w-screen-2xl mx-auto text-yellow-400 fixed top-0 right-0 left-0 shadow-md">
@@ -50,7 +51,7 @@ function Navbar() {
             </button>
             {/* modal */}
           </div>
-          <div className=" md:hidden">
+          <div className=" md:hidden space-x-2">
             <button>
               <FaUserCircle
                 className="text-yellow-400 h-9 w-9"
