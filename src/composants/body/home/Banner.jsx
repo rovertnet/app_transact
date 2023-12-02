@@ -17,7 +17,10 @@ const itemVariants = {
 };
 
 function Banner() {
-  
+  const animationVariants = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
   return (
     <>
       <div
@@ -36,16 +39,22 @@ function Banner() {
             </div>
             {/* La présentation */}
             <div className=" md:w-full">
-              <h2 className=" md:text-3xl text-2xl font-bold text-white mb-6 leading-relaxed">
-                Je suis le premier de ce bannier, en répresentant Artha beauté.
-              </h2>
-              <motion.p
+              <motion.h2
                 variants={itemVariants}
-                animate="visible"
-                initial="hidden"
-                className=" text-[#f3f4f5] text-xl mb-5 md:text-justify text-justify"
+                className=" md:text-3xl text-2xl font-bold text-white mb-6 leading-relaxed"
               >
                 <AnimeText deley={1} />
+              </motion.h2>
+              <motion.p
+                variants={animationVariants}
+                initial="initial"
+                animate="animate"
+                className=" text-[#f3f4f5] text-xl mb-5 md:text-justify text-justify"
+              >
+                Simplifiez votre vie financière avec notre plateforme de
+                paiement des factures. Payez vos factures en toute sécurité,
+                rapidement et sans tracas. Profitez de la commodité d'un
+                processus simple et efficace pour gérer vos paiements en ligne.
               </motion.p>
               <a className=" space-x-5 space-y-4 " href="#paie">
                 <button className=" py-3 px-6 text-xl text-white font-semibold border-2 border-white rounded-3xl hover:bg-[#8064f9] hover:text-white hover:border-none transition-all duration-300">

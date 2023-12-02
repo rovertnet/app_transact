@@ -6,8 +6,7 @@ import { useEffect } from "react";
 function AnimeText() {
   const textIndex = useMotionValue(0);
   const texts = [
-    "Lorem ipsum, dolor sit amet consectetur adipisicing elit. ",
-    "Dignissimos sint facere ad, veniam earum quas quasi!",
+    "Bienvenu.e sur notre plate-forme de paiement de facture...! ",
   ];
   const baseText = useTransform(textIndex, (latest) => texts[latest] || "");
   const count = useMotionValue(0);
