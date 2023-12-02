@@ -6,7 +6,7 @@ function Banner() {
         className=" md:px-14 px-4 max-w-screen-2xl mx-auto mt-16 mb-8"
         id="accueil"
       >
-        <div className=" md:p-9 px-4 py-9 bg-[#096cff] rounded-tl-[100px] rounded-br-[100px]">
+        <div className=" md:p-9 px-4 py-9 bg-gradient-to-r from-indigo-500 ... rounded-tl-[100px] rounded-br-[100px]">
           <div className=" flex flex-col md:flex-row-reverse justify-between items-center gap-10">
             {/* image */}
             <div>
@@ -26,7 +26,7 @@ function Banner() {
                 Dignissimos sint facere ad, veniam earum quas quasi!
               </p>
               <a className=" space-x-5 space-y-4 " href="#paie">
-                <button className=" py-3 px-6 text-xl text-white font-semibold bg-[#096cff] border-2 border-white rounded-3xl hover:bg-[#0389ff] hover:text-white hover:border-none transition-all duration-300">
+                <button className=" py-3 px-6 text-xl text-white font-semibold border-2 border-white rounded-3xl hover:bg-[#8064f9] hover:text-white hover:border-none transition-all duration-300">
                   Payer votre facture
                 </button>
               </a>

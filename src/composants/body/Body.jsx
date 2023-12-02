@@ -7,8 +7,8 @@ function Body() {
   return (
     <div>
       <Banner />
-      <Paie />
       <About />
+      <Paie />
     </div>
   );
 }

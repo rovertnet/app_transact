@@ -13,7 +13,7 @@ function Modal({onClose}) {
     <div
       ref={modalRef}
       onClick={closeModal}
-      className="md:px-14 p-4 fixed inset-0 bg-gray-400 bg-opacity-30 backdrop-blur-sm flex justify-center items-center"
+      className="md:px-14 p-4 fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex justify-center items-center"
     >
       <div
         ref={modalRef}

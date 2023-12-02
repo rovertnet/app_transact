@@ -3,6 +3,7 @@ import {Link} from "react-scroll";
 import { BiMenuAltRight } from "react-icons/bi";
 import { HiOutlineXMark } from "react-icons/hi2";
 import Modal from "./modal/Modal";
+import { FaUserCircle } from "react-icons/fa";
 
 function Navbar() {
   const [ showModal, setShowModal ] = useState(false)
@@ -50,6 +51,12 @@ function Navbar() {
             {/* modal */}
           </div>
           <div className=" md:hidden">
+            <button>
+              <FaUserCircle
+                className="text-yellow-400 h-9 w-9"
+                onClick={() => setShowModal(true)}
+              />
+            </button>
             <button
               onClick={toggleMenu}
               className=" text-white focus:outline-none focus:text-[#feff5b]"
@@ -57,16 +64,18 @@ function Navbar() {
               {showMenu ? (
                 <HiOutlineXMark className=" h-8 w-8 text-yellow-400 transition-all duration-300" />
               ) : (
-                <BiMenuAltRight className=" h-10 w-10 text-yellow-400 transition-all duration-300" />
+                <div className="flex space-x-2">
+                  <BiMenuAltRight className=" h-10 w-10 text-yellow-400 transition-all duration-300 " />
+                </div>
               )}
             </button>
           </div>
         </div>
       </nav>
 
-      <div className="px-10">
+      <div className="left-11 right-11">
         <div
-          className={` space-y-4 mt-16 w-[400] justify-center px-6 py-3 pb-5 bg-blue-950 ${
+          className={` space-y-4 mt-16 w-[400] justify-center px-6 py-3 pb-5 bg-blue-950 rounded-br-2xl rounded-bl-2xl ${
             showMenu
               ? "block justify-center fixed top-0 right-0 left-0"
               : "hidden "
@@ -79,24 +88,15 @@ function Navbar() {
               offset={-80}
               key={link}
               to={path}
-              className=" block text-yellow-400 hover:text-white hover:bg-blue-200 hover:py-2 cursor-pointer font-semibold text-xl text-center"
+              className=" block text-yellow-400 hover:text-white hover:bg-[#12035479] hover:py-2 cursor-pointer font-semibold text-xl text-center"
               onClick={toggleMenu}
             >
               {link}
             </Link>
           ))}
-          <div className=" space-x-12 ">
-            <button
-              onClick={() => setShowModal(true)}
-              offset={-80}
-              className=" bg-yellow-400 text-xl w-full py-2 px-4 translate-all duration-300 rounded-3xl text-blue-950 font-semibold hover:text-blue-600 hover:bg-white hover:font-semibold hover:text "
-            >
-              Sign Up
-            </button>
-          </div>
         </div>
       </div>
-
+      {/* le modal de Sign Up */}
       {showModal && <Modal onClose={() => setShowModal(false)} />}
     </>
   );
