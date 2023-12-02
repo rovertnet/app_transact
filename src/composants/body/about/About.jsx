@@ -14,16 +14,23 @@ function About() {
 
           <div className=" md:w-4/5">
             <p className=" text-slate-500 text-xl mb-3 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-              reiciendis beatae obcaecati autem blanditiis, atque alias adipisci
-              facere molestiae dicta ex nulla ratione, tempore dolor dolore
-              suscipit earum in velit!
+              Bienvenue chez SNL Rapide Paie, l'adresse incontournable pour
+              simplifier vos paiements en ligne. Notre plateforme offre une
+              expérience utilisateur sans faille, mettant l'accent sur la
+              simplicité et la sécurité. Que vous régliez vos factures
+              mensuelles, fassiez des achats en ligne ou gériez vos abonnements,
+              nous sommes là pour rendre chaque transaction transparente et
+              efficace.
             </p>
             <p className=" text-slate-500 text-lg mb-3 text-justify">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum,
-              reiciendis beatae obcaecati autem blanditiis, atque alias adipisci
-              facere molestiae dicta ex nulla ratione, tempore dolor dolore
-              suscipit earum in velit!
+              Chez SNL Rapide Paie, nous comprenons l'importance de la confiance
+              dans les transactions en ligne. C'est pourquoi notre équipe
+              dévouée travaille sans relâche pour garantir la sécurité de vos
+              informations financières. Explorez une nouvelle ère de paiements
+              en ligne avec nous, où la praticité rencontre la tranquillité
+              d'esprit. Avec notre engagement envers l'innovation et la
+              fiabilité, nous sommes prêts à façonner ensemble le futur de vos
+              transactions financières.
             </p>
           </div>
         </div>

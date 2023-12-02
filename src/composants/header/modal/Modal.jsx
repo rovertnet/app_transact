@@ -46,6 +46,30 @@ function Modal({onClose}) {
               type="password"
               placeholder="Votre mot de passe"
             />
+            {isLogin ? (
+              <div className=" flex justify-between items-center py-2">
+                <div className=" flex justify-start md:text-base space-x-1">
+                  <input
+                    type="checkbox"
+                    value=""
+                    placeholder="se souvenir de moi"
+                  />
+                  <span>se souvenir</span>
+                </div>
+                <a className=" text-blue-600 md:text-base" href="#">
+                  Mot de passe oublié
+                </a>
+              </div>
+            ) : (
+              <div className=" flex justify-start md:text-base space-x-1 px-5 py-2">
+                <input
+                  type="checkbox"
+                  value=""
+                  placeholder="se souvenir de moi"
+                />
+                <span>J'accepte toutes les conditions</span>
+              </div>
+            )}
             <button className="bg-[#096cff] px-4 py-2 text-white rounded-xl place-self-end text-xl font-semibold md:w-full w-full">
               {isLogin ? "connectez-vous" : " Inscrivez-vous"}
             </button>

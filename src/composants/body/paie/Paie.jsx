@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Paiement from "./Paiement";
-
+import { BiRightArrowAlt } from "react-icons/bi";
 
 function Paie() {
   const [showMod, setShowMod] = useState(false)
@@ -12,7 +12,7 @@ function Paie() {
     <>
       <div className=" md:px-14 p-4 max-w-s mx-auto" id="paie">
         <h2 className="text-center text-3xl font-extrabold  pb-3 text-black">
-          Effectuez votre paiement
+          paiement
         </h2>
         <div className=" flex flex-col  md:flex-row justify-between items-center gap-3 border-t-4 border-indigo-500  rounded-xl px-8 pb-5 shadow-md">
           <div className=" md:w-1/2">
@@ -25,8 +25,8 @@ function Paie() {
             <div className="px-6">
               <div className="mt-2">
                 <p className="text-blue-950 text-center pb-3">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Veuillez cliquer sur le bouton ci-bas.
+                  Simplifiez votre vie financière avec notre plateforme de
+                  paiement des factures.
                 </p>
               </div>
 
@@ -34,9 +34,9 @@ function Paie() {
                 <button
                   onClick={() => setShowMod(true)}
                   type="submit"
-                  className="p-3 w-full bg-[#4180ff] rounded-xl text-lg text-white font-semibold hover:bg-[#5b97ff] transition-all duration-300"
+                  className="p-3 w-full flex justify-between space-x-20 bg-[#4180ff] rounded-xl text-lg text-white font-semibold hover:bg-[#5b97ff] transition-all duration-300"
                 >
-                  Payer la facture
+                  Payer la facture <BiRightArrowAlt className=" text-2xl font-semibold" />
                 </button>
               </div>
             </div>
