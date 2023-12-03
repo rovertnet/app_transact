@@ -1,11 +1,11 @@
 import { useRef } from "react";
 import { HiOutlineXMark } from "react-icons/hi2";
 
-function Paiement(onclose) {
+function Paiement(onClose) {
   const modRef = useRef();
   const closeMod = (r) => {
     if (modRef.current === r.target) {
-      onclose();
+      onClose()
     }
   };
   return (

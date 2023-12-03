@@ -1,13 +1,9 @@
 import { useState } from "react";
-import Paiement from "./Paiement";
 import { BiRightArrowAlt } from "react-icons/bi";
+import Paiement from "./Paiement";
 
 function Paie() {
-  const [showMod, setShowMod] = useState(false)
-  // const {isform, setForm, formState : {errors}} = useForm();
-  // function Submit (data) {
-  //   console.log(data);
-  // }
+  const [ viewModal, setViewModal ] = useState(false);
   return (
     <>
       <div className=" md:px-14 p-4 max-w-s mx-auto" id="paie">
@@ -32,7 +28,7 @@ function Paie() {
 
               <div className="">
                 <button
-                  onClick={() => setShowMod(true)}
+                onClick={() => setViewModal(true)}
                   type="submit"
                   className="p-3 w-full flex justify-between space-x-20 bg-[#4180ff] rounded-xl text-lg text-white font-semibold hover:bg-[#5b97ff] transition-all duration-300"
                 >
@@ -43,7 +39,7 @@ function Paie() {
           </div>
         </div>
       </div>
-      {showMod && <Paiement onClose={() => setShowMod(false)} />}
+      { viewModal && <Paiement onClose={() => setViewModal(false)} /> }
     </>
   );
 }
