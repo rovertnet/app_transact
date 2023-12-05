@@ -1,18 +1,19 @@
+
 import { useRef } from "react";
 import { HiOutlineXMark } from "react-icons/hi2";
 
-function Paiement(onClose) {
-  const modRef = useRef();
-  const closeMod = (r) => {
-    if (modRef.current === r.target) {
-      onClose()
+function Paiement(close) {
+  const refModal = useRef();
+  const modalClose = (t) => {
+    if (refModal.current === t.target) {
+      close();
     }
-  };
+  }
   return (
     <>
-      <div ref={modRef} onClick={closeMod} className="md:px-14 p-4 fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex justify-center items-center">
+      <div ref={refModal} onClick={modalClose} className="md:px-14 p-4 fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm flex justify-center items-center">
         <div className="my-5 flex flex-col gap-5">
-          <button onClick={onclose} className="place-self-end font-semibold text-white text-2xl">
+          <button onClick={close} className="place-self-end font-semibold text-white text-2xl">
             <HiOutlineXMark />
           </button>
           <div className=" bg-slate-200 rounded-xl md:px-14 px-8 py-8 flex flex-col gap-5 items-center mx-4">

@@ -1,9 +1,10 @@
+
 import { useState } from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
 import Paiement from "./Paiement";
 
 function Paie() {
-  const [ viewModal, setViewModal ] = useState(false);
+  const [viewMod, setViewMod] = useState(false);
   return (
     <>
       <div className=" md:px-14 p-4 max-w-s mx-auto" id="paie">
@@ -28,7 +29,7 @@ function Paie() {
 
               <div className="">
                 <button
-                onClick={() => setViewModal(true)}
+                  onClick={() => setViewMod(true)}
                   type="submit"
                   className="p-3 w-full flex justify-between space-x-20 bg-[#4180ff] rounded-xl text-lg text-white font-semibold hover:bg-[#5b97ff] transition-all duration-300"
                 >
@@ -39,7 +40,9 @@ function Paie() {
           </div>
         </div>
       </div>
-      { viewModal && <Paiement onClose={() => setViewModal(false)} /> }
+      {viewMod &&
+        <Paiement close={() => setViewMod(false)} />
+      }
     </>
   );
 }

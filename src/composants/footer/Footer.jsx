@@ -16,10 +16,10 @@ function Footer() {
               />
             </a>
             <p className=" md:w-1/2 text-slate-200">
-              Bienvenue sur le site de notre agence de maquillage et coiffure
-              pour femmes!
+              Simplifiez votre vie financière avec notre plateforme de paiement
+              des factures.
             </p>
-            <div className=" py-4" >
+            <div className=" py-4">
               <input
                 type="text"
                 name="mail"

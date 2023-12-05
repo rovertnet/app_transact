@@ -47,7 +47,7 @@ function Modal({onClose}) {
               placeholder="Votre mot de passe"
             />
             {isLogin ? (
-              <div className=" flex justify-between items-center py-2">
+              <div className=" flex justify-between items-center py-2 px-5">
                 <div className=" flex justify-start md:text-base space-x-1">
                   <input
                     type="checkbox"
@@ -63,11 +63,12 @@ function Modal({onClose}) {
             ) : (
               <div className=" flex justify-start md:text-base space-x-1 px-5 py-2">
                 <input
+                  className=" cursor-pointer"
                   type="checkbox"
                   value=""
                   placeholder="se souvenir de moi"
                 />
-                <span>J'accepte toutes les conditions</span>
+                <span>J'accepte toutes les conditions d'utilisation</span>
               </div>
             )}
             <button className="bg-[#096cff] px-4 py-2 text-white rounded-xl place-self-end text-xl font-semibold md:w-full w-full">
