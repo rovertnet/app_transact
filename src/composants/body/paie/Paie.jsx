@@ -11,7 +11,7 @@ function Paie() {
         <h2 className="text-center text-3xl font-extrabold  pb-3 text-black">
           paiement
         </h2>
-        <div className=" flex flex-col  md:flex-row justify-between items-center gap-3 border-t-4 border-indigo-500  rounded-xl px-8 pb-5 shadow-md">
+        <div className=" flex flex-col  md:flex-row justify-between items-center gap-3 border-t-4 border-[#bfe2ff] rounded-xl px-8 pb-5 shadow-md">
           <div className=" md:w-1/2">
             <img src="../../public/P2.png" alt="ùission" />
           </div>
@@ -33,16 +33,15 @@ function Paie() {
                   type="submit"
                   className="p-3 w-full flex justify-between space-x-20 bg-[#4180ff] rounded-xl text-lg text-white font-semibold hover:bg-[#5b97ff] transition-all duration-300"
                 >
-                  Payer la facture <BiRightArrowAlt className=" text-2xl font-semibold" />
+                  Payer la facture{" "}
+                  <BiRightArrowAlt className=" text-2xl font-semibold" />
                 </button>
               </div>
             </div>
           </div>
         </div>
       </div>
-      {viewMod &&
-        <Paiement close={() => setViewMod(false)} />
-      }
+      {viewMod && <Paiement close={() => setViewMod(false)} />}
     </>
   );
 }
