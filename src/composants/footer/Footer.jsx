@@ -78,6 +78,24 @@ function Footer() {
                 </a>
               </ul>
             </div>
+
+            <div className=" space-y-4 mt-5">
+              <h5 className=" text-white text-xl">Contact</h5>
+              <ul className=" space-y-2">
+                <a
+                  href="/"
+                  className=" block text-gray-400 hover:text-gray-300"
+                >
+                  CGT
+                </a>
+                <a
+                  href="/service"
+                  className=" block text-gray-400 hover:text-gray-300"
+                >
+                  Politique de confidentialité
+                </a>
+              </ul>
+            </div>
           </div>
         </div>
         {/* hr */}
@@ -88,18 +106,38 @@ function Footer() {
           </p>
           <div className="flex items-center space-x-5">
             <img
-              className=" w-10 h-10 cursor-pointer hover:-translate-y-4 transition-all duration-300"
-              src="../../public/X.png"
+              className=" w-8 h-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+              src="../../public/img/PAYPAL.jpg"
               alt="réseaux"
             />
             <img
-              className=" w-10 h-10 cursor-pointer hover:-translate-y-4 transition-all duration-300"
-              src="../../public/facebook.png"
+              className=" w-8 h-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+              src="../../public/img/mastercard.png"
               alt="réseaux"
             />
             <img
-              className=" w-22 h-12 cursor-pointer hover:-translate-y-4 transition-all duration-300"
-              src="../../public/tiktok.png"
+              className=" w-8 h-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+              src="../../public/img/visa.png"
+              alt="réseaux"
+            />
+            <img
+              className=" w-8 h-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+              src="../../public/img/mpesa.png"
+              alt="réseaux"
+            />
+            <img
+              className=" w-8 h-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+              src="../../public/img/Airtel+Money.png"
+              alt="réseaux"
+            />
+            <img
+              className=" w-8 h-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+              src="../../public/img/Orange_Money.jpg"
+              alt="réseaux"
+            />
+            <img
+              className="w-8 h-8 cursor-pointer hover:-translate-y-4 transition-all duration-300"
+              src="../../public/img/afrimoney.png"
               alt="réseaux"
             />
           </div>
